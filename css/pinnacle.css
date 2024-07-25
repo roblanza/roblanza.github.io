@@ -8,6 +8,19 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.text{@media screen and (max-width:768px) {display:none}}
+.head2{@media screen and (min-width:768px) {display:none;}}
+.head2{
+  font-color:white;
+  font-family:montserrat;
+  font-weight:900; font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  margin-top:45px;
+}
+
+.container{@media screen and (max-width:768px) {margin-top:50px}} 
+
 h2 {
   font-size: 2rem;
   font-weight: 200;
