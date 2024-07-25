@@ -1,0 +1,267 @@
+html {
+  overflow: hidden;
+  text-rendering: geometricPrecision;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+}
+
+.background {
+  height: 100vh;
+  width: auto;
+  left: 0;
+  align-items: start;
+  align-self: baseline;
+  position: absolute;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-top: 5rem;
+  margin-right: 10rem;
+  text-align: right;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+@media (max-width: 900px) {
+  h2 {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+}
+
+.logo {
+  max-width: 10vw;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 100;
+  transition: all 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.logo2 {
+  max-width: 10vw;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 100;
+  transition: all 0.2s ease;
+  opacity: 0
+}
+
+.logo2:hover {
+  opacity: 1 !important;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 900px) {
+
+  .logo,
+  .logo2,
+  .logo:hover,
+  .logo2:hover {
+    max-width: 25vw;
+  }
+}
+
+@media (min-width: 901px) {
+  .hero-image-element {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  .mobim {
+    display: none !important;
+  }
+}
+
+@keyframes text-flow {
+  25% {
+    font-variation-settings: "wght" 900, "wdth" 100;
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(50px);
+    font-variation-settings: "wght" 700, "wdth" 100;
+  }
+
+  75% {
+    transform: translateY(0%);
+    font-variation-settings: "wght" 900, "wdth" 100;
+    filter: hue-rotate(-135deg);
+  }
+}
+
+
+
+.footer {
+  width: 100vw;
+  height: 8vh;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  font-weight:200;
+}
+
+.footer-box {
+  flex-basis: calc(100% / 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.2rem;
+  text-shadow: -0.1rem 0 red, 0.1rem 0 cyan;
+  letter-spacing: .5rem;
+}
+
+.footer-img {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 75px;
+  width: 3rem;
+}
+
+footer{
+  font-weight: 200;
+}
+
+.right-aligned {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  text-align: right;
+  overflow: hidden;
+}
+
+h1 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-size: 43vh;
+  line-height: 30vh;
+  margin-right: 160px;
+}
+
+.marginn {
+  margin-right: 169.5px;
+  margin-top: 4vh;
+}
+
+
+@media (max-width: 900px) {
+  .footer-box {
+    flex-basis: calc(100% / 3);
+  }
+
+  .footer-img {
+    display: none;
+  }
+
+  h1 {
+    font-size: 25vh;
+    line-height: 15vh;
+    margin-right: 0;
+  }
+
+  .marginn {
+    margin-top: 25vh;
+    margin-right: 0.4vh;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+a,
+a:hover,
+a:link,
+a:active,
+a:visited {
+  font-weight: 600 !important;
+  text-decoration: none;
+  color: white;
+}
+
+span {
+	background-image: linear-gradient(white, white);
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	background-size: 100% 2px;
+	transition: background-size .5s, background-position .3s ease-in .5s;
+}
+
+span:hover {
+	background-size: 100% 100%;
+	background-position: 0% 0%;
+	transition: background-position .5s, background-size .3s ease-in .5s;
+}
+
+span a{
+  mix-blend-mode: exclusion;
+
+}

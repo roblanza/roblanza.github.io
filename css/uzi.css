@@ -1,0 +1,231 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: url(https://i.imgur.com/0KPmedG.gif), auto !important;
+}
+
+body {
+  background-image: url("https://i.imgur.com/1mALbCh.jpg");
+  background-size: cover;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    position: relative;
+    resize: both;
+    overflow: auto;
+    width: 65vw;
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .container {
+    position: relative;
+    resize: both;
+    overflow: auto;
+    width: 80vw;
+    height: 80vh;
+  }
+}
+
+.container {
+  padding: 132px 0 45px 0;
+  background: #1a0095;
+}
+
+.browser-frame {
+  position: relative;
+  padding: 132px 0 45px 0;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  border-image-slice: 171 57 57 515 fill;
+}
+
+.browser-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -2px;
+  bottom: 0;
+  border-image: url("https://i.imgur.com/BceDPDV.png");
+  border-image-slice: 171 57 57 515 fill;
+  border-image-width: 170px 56px 57px 515px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: repeat repeat;
+  pointer-events: none;
+}
+
+p {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.center {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+main {
+  padding: 10px 0;
+  background: #222;
+  text-align: center;
+  color: aqua;
+  height: 100%;
+  overflow: auto;
+  text-transform: uppercase;
+}
+
+.flexx,
+.pic,
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexx img {
+  width: 100px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 20px;
+}
+
+
+.pics img {
+  max-width: 400px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 5px;
+  border: gray 5px outset;
+}
+
+.ozzy img {
+  max-width: 800px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 5px;
+  border: gray 5px outset;
+}
+
+.ozzy p {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 25px;
+}
+
+.halloween img {
+  max-height: 200px;
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 20px;
+}
+
+.title,
+.halloween {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.title img {
+  max-height: 40px;
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 20px;
+
+}
+
+.flame img {
+  max-height: 50px;
+  width: auto;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+}
+
+img {
+  width: 80%;
+  height: auto;
+}
+
+a {
+  color: hotpink;
+}
+
+#drag-handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+}
+
+.resize-handle {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  right: 0;
+  bottom: 0;
+  top: auto !important;
+  left: auto !important;
+  margin-top: -22px;
+  margin-left: -22px;
+  width: 20px;
+  height: 20px;
+  cursor: url("https://i.imgur.com/MUDH2IC.gif"), nw-resize !important;
+}
+
+.content {
+  background: url("https://assets.codepen.io/652/90s_dark_pool.png");
+}
+
+h1 {
+  display: block;
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) 1s infinite;
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: -0.5rem;
+}
+
+h1:nth-of-type(1) {
+  color: red;
+}
+
+@keyframes flicker {
+  50% {
+    color: white;
+    filer: saturate(200%) hue-rotate(20deg);
+  }
+}
+
+marquee {
+  color: white;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.pause {
+  margin-left: 0.5em;
+  cursor: pointer;
+}
