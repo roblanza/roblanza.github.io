@@ -1,6 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 
+.desktop{@media screen and (max-width:768px) {display:none}}
+.mobile{@media screen and (min-width:768px) {display:none;}}
+
+.mobile{
+	overflow-y:hidden;
+}
+
+.mobhead img{
+	width:100%;
+	position: absolute;
+	z-index:-999!important;
+}
+
+.mobhead p{
+	z-index:10000;
+	font-size: 3em;
+	font-weight: 300;
+	color: white;
+}
+
+.mobhead a{
+	text-decoration:underline
+}
+
 html {
 	scroll-behavior: smooth;
 }
