@@ -357,7 +357,7 @@ h3:hover {
     flex-basis: calc(100% / 3);
   }
 
-  .footer {
+  .footer, .footer-img {
     display: none;
   }
 }
